@@ -1,0 +1,365 @@
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  /* End General */
+
+  #btnTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto por defecto */
+    z-index: 100; /* Asegúrate de que esté por encima de otros elementos */
+  }
+
+  #particlesJS {
+    background: linear-gradient(to right, #000000, #4b0082, #800080);
+  }
+
+  #particles-js {
+    background: linear-gradient(to right, #000000, #4b0082, #800080);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100% !important;
+  }
+  #principal {
+    color: rgba(255, 255, 255, 0.219);
+  }
+
+  /* hover-difficulty */
+
+  .hover-difficulty {
+    background: #4b0082;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 10px 0;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .hover-difficulty:hover {
+    background: #fff;
+    color: #000;
+    scale: 1.01;
+    border: gray 1px solid;
+  }
+
+  /* skills */
+
+  /* cards */
+  .card {
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card {
+    cursor: pointer;
+  }
+
+  .img-project {
+    width: 100%;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  /* Skills */
+
+  /* General Styles */
+  body {
+    background-color: #f8f9fa;
+    font-family: "Arial", sans-serif;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fade-in 1s ease-in-out;
+  }
+
+  .text-purple {
+    color: #6f42c1;
+  }
+
+  /* Compact Skill Card Styles */
+  .skill-card {
+    border: none;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 15px;
+  }
+
+  .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .compact-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6f42c1;
+  }
+
+  .skill-list {
+    padding-left: 1rem;
+    list-style: none;
+    margin: 0;
+  }
+
+  .skill-list li {
+    margin: 0.3rem 0;
+    padding: 0.3rem;
+    border-radius: 5px;
+    background-color: #f8f9fc;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .skill-list li:hover {
+    background-color: #e0d4f5;
+    transform: translateX(5px);
+  }
+
+  /* Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: fade-in 1s ease-in-out;
+}
+
+.text-purple {
+  color: #6f42c1;
+}
+
+/* Work experience */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  border-left: 2px solid #6f42c1;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: #6f42c1;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.timeline-content {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #6f42c1;
+  margin-bottom: 0.5rem;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+      padding-left: 1rem;
+  }
+
+  .timeline-item {
+      padding-left: 0.5rem;
+  }
+
+  .timeline-content {
+      font-size: 0.9rem;
+  }
+}
+
+
+/* General Footer Styles */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding-top: 40px;
+}
+
+.footer h5 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #6f42c1;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-link i {
+  font-size: 1.2rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .footer .col-md-3 {
+      margin-bottom: 20px;
+  }
+}
+
+/* Hover Effect */
+.footer a:hover {
+  color: #6f42c1;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.footer .container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.footer .row {
+  margin-bottom: 20px;
+}
+

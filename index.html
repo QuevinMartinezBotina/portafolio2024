@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dev Santiago Martinez</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <main id="particles-js" class="bg-black vh-100"></main>
+
+    <!-- Botón flotante para volver arriba -->
+    <button onclick="scrollToTop()" id="btnTop" class="btn hover-difficulty">
+      ↑
+    </button>
+
+    <header
+      id="principal"
+      class="vh-100 d-flex align-items-center justify-content-center text-white presentation"
+    >
+      <div class="container text-center">
+        <h1 class="animate__animated animate__bounce fw-bold animate__repeat-2">
+          Desarrollador FullStack
+        </h1>
+        <p class="lead animate__animated animate__pulse animate__delay-2s fw-">
+          Soy Santiago Martinez
+        </p>
+        <p>+ 2 años de experiencia</p>
+        <a href="#porjects" class="btn hover-difficulty hover-difficulty"
+          >Proyectos</a
+        >
+        <a href="#skills" class="btn hover-difficulty">Skills</a>
+        <a href="#experience" class="btn hover-difficulty">Expeciencia</a>
+        <br />
+
+        <a
+          href="https://www.linkedin.com/in/quevin-santiago-martinez-botina-9b766a151/"
+          target="_blank"
+          class="btn btn-outline-light me-2"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@devparaelpueblo1333"
+          target="_blank"
+          class="btn btn-outline-light me-2"
+        >
+          <i class="bi bi-youtube"></i>
+        </a>
+        <a
+          href="https://github.com/QuevinMartinezBotina"
+          target="_blank"
+          class="btn btn-outline-light"
+        >
+          <i class="bi bi-git"></i>
+        </a>
+      </div>
+      <div class="social-links mt-4"></div>
+
+      <div class="social-links mt-4"></div>
+    </header>
+
+    <!-- Proyectos -->
+    <div id="porjects" class="container">
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <h2 class="fw-bold">Filtrar proyectos por dificultad</h2>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Filtrar por Dificultad"
+          >
+            <button
+              id="showAllButton"
+              type="button"
+              class="btn btn-secondary hover-difficulty"
+              onclick="filterProjects('todos')"
+            >
+              Todo
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary hover-difficulty"
+              onclick="filterProjects('baja')"
+            >
+              Baja
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary hover-difficulty"
+              onclick="filterProjects('media')"
+            >
+              Media
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary hover-difficulty"
+              onclick="filterProjects('alta')"
+            >
+              Alta
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container projects -->
+      <div id="" class="container mt-5">
+        <div id="projectsContainer" class="row">
+          <!-- Nivel bajo -->
+          <div class="col-md-4 project" data-dificultad="baja">
+            <div class="card mb-4">
+              <img
+                src="https://threedio-prod-var-cdn.icons8.com/bd/preview_sets/previews/j16p8EXUyNFlSdYH.webp"
+                class="card-img-top img-project"
+                alt="Proyecto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Proyecto 1</h5>
+                <p class="card-text">Descripción breve del proyecto 1.</p>
+                <div class="row fs-6 text-center">
+                  <a
+                    href="#"
+                    class="btn hover-difficulty col-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectChatOnline"
+                    >Ver más</a
+                  >
+                  <a
+                    href="https://quevinchat-44b79aa344a4.herokuapp.com/"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    >Ver online</a
+                  >
+                  <a
+                    href="https://github.com/QuevinMartinezBotina/Chat-Sockets.git"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    ><i class="bi bi-git"> </i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nivel Medio -->
+          <div class="col-md-4 project" data-dificultad="media">
+            <div class="card mb-4">
+              <img
+                src="https://threedio-prod-var-cdn.icons8.com/ep/preview_sets/previews/meqqGuyfsX0Hrf43.webp"
+                class="card-img-top img-project"
+                alt="Proyecto 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Proyecto 2</h5>
+                <p class="card-text">Descripción breve del proyecto 2.</p>
+                <div class="row fs-6 text-center">
+                  <a
+                    href="#"
+                    class="btn hover-difficulty col-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectChatOnline"
+                    >Ver más</a
+                  >
+                  <a
+                    href="https://quevinchat-44b79aa344a4.herokuapp.com/"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    >Ver online</a
+                  >
+                  <a
+                    href="https://github.com/QuevinMartinezBotina/Chat-Sockets.git"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    ><i class="bi bi-git"> </i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nivel alto -->
+          <div class="col-md-4 project" data-dificultad="alta">
+            <div class="card mb-4">
+              <img
+                src="https://i.ibb.co/jrVQ0tJ/projects.png"
+                class="card-img-top img-project"
+                alt="Proyecto 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chat Online</h5>
+                <p class="card-text">Chat en tiempo real con socket.io</p>
+
+                <div class="row fs-6 text-center">
+                  <a
+                    href="#"
+                    class="btn hover-difficulty col-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectOne"
+                    >Ver más</a
+                  >
+                  <a
+                    href="https://quevinchat-44b79aa344a4.herokuapp.com/"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    >Ver online</a
+                  >
+                  <a
+                    href="https://github.com/QuevinMartinezBotina/Chat-Sockets.git"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    ><i class="bi bi-git"> </i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 project" data-dificultad="alta">
+            <div class="card mb-4">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4D12AQEAO8b3YbB2bw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1670420866062?e=1738800000&v=beta&t=GXULFEY62FFz2birbC6I6DkEGsbliAvuacMJ9YH_CuY"
+                class="card-img-top img-project"
+                alt="Proyecto 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Api rest</h5>
+                <p class="card-text">Api desarrollada en Node.js</p>
+        
+                <div class="row fs-6 text-center">
+                  <a
+                    href="#"
+                    class="btn hover-difficulty col-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectChatOnline"
+                    >Ver más</a
+                  >
+                  <a
+                    href="https://quevinchat-44b79aa344a4.herokuapp.com/"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    >Ver online</a
+                  >
+                  <a
+                    href="https://github.com/QuevinMartinezBotina/Chat-Sockets.git"
+                    class="btn hover-difficulty col-4"
+                    target="_blank"
+                    ><i class="bi bi-git"> </i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals projects -->
+
+    <!-- Modal Dificultad alta-->
+    <div
+      class="modal fade"
+      id="projectOne"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Chat Online<h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="row fw-normal"></div>
+              <div class="col-12">
+                <img
+                  src="https://i.ibb.co/jrVQ0tJ/projects.png"
+                  class="img-fluid"
+                  alt="Chat Online"
+                />
+              </div>
+              <div class="col-12 mt-4">
+                <p>
+                  Chat en tiempo real creado con Node.js y Socket.io para gestionar comunicación instantánea en el servidor, 
+                  complementado con HTML, CSS y JavaScript para una interfaz web atractiva y funcional. Este proyecto destaca 
+                  mi capacidad para implementar soluciones eficientes que responden a la necesidad de interacción inmediata en aplicaciones web.
+                </p>
+                <div class="row">
+                  <div class="col-2"><i class="bi bi-filetype-html"></i></div>
+                  <div class="col-2"><i class="bi bi-filetype-js"></i></div>
+                  <div class="col-2"><i class="bi bi-filetype-js"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="container py-5" id="skills">
+      <h2 class="text-center mb-4 section-heading">Mis habilidades</h2>
+      <div class="row gy-3">
+          <!-- Skill Category: Frontend -->
+          <div class="col-lg-3 col-md-6">
+              <div class="card skill-card compact-card reveal fade-in">
+                  <div class="card-body">
+                      <h5><i class="fas fa-laptop-code me-2"></i>Frontend</h5>
+                      <ul class="skill-list">
+                          <li>HTML</li>
+                          <li>CSS</li>
+                          <li>Bootstrap</li>
+                          <li>Vue.js</li>
+                          <li><strong>In Progress:</strong> Tailwind CSS, Livewire</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- Skill Category: Backend -->
+          <div class="col-lg-3 col-md-6">
+              <div class="card skill-card compact-card reveal slide-in-right">
+                  <div class="card-body">
+                      <h5><i class="fas fa-server me-2"></i>Backend</h5>
+                      <ul class="skill-list">
+                          <li>PHP</li>
+                          <li>Laravel</li>
+                          <li>CodeIgniter</li>
+                          <li>Node.js</li>
+                          <li>MySQL</li>
+                          <li>PostgreSQL</li>
+                          <li>MongoDB</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- Skill Category: Soft Skills -->
+          <div class="col-lg-3 col-md-6">
+              <div class="card skill-card compact-card reveal slide-in-left">
+                  <div class="card-body">
+                      <h5><i class="fas fa-user-check me-2"></i>Soft Skills</h5>
+                      <ul class="skill-list">
+                          <li>Autonomous Learning</li>
+                          <li>Error Recognition</li>
+                          <li>Time Management</li>
+                          <li>Delivery Handling</li>
+                          <li>Good Team Communication</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- Skill Category: Technologies -->
+          <div class="col-lg-3 col-md-6">
+              <div class="card skill-card compact-card reveal fade-in">
+                  <div class="card-body">
+                      <h5><i class="fas fa-tools me-2"></i>Technologies</h5>
+                      <ul class="skill-list">
+                          <li>GitHub</li>
+                          <li>GitLab</li>
+                          <li>Linux</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+     <!-- Work Experience Section -->
+     <div class="container py-5" id="experience">
+      <h2 class="text-center mb-4 section-heading">Experiencia</h2>
+      <div class="timeline">
+          <!-- Timeline Item -->
+          <div class="timeline-item reveal fade-in">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                  <h5>Frontend Developer - XYZ Company</h5>
+                  <p class="timeline-date">Jan 2022 - Present</p>
+                  <p>Developed responsive web applications using React, Bootstrap, and Tailwind CSS. Optimized UI/UX for 20+ projects, improving user retention by 25%.</p>
+              </div>
+          </div>
+          <!-- Timeline Item -->
+          <div class="timeline-item reveal slide-in-left">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                  <h5>Backend Developer - ABC Solutions</h5>
+                  <p class="timeline-date">May 2019 - Dec 2021</p>
+                  <p>Designed RESTful APIs with Node.js and Laravel. Maintained and optimized MySQL databases, enhancing system performance by 30%.</p>
+              </div>
+          </div>
+          <!-- Timeline Item -->
+          <div class="timeline-item reveal slide-in-right">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                  <h5>Intern - DEF Tech</h5>
+                  <p class="timeline-date">Jan 2018 - Apr 2019</p>
+                  <p>Assisted in software development projects, debugging code, and creating technical documentation for internal tools.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+ 
+
+     <!-- Footer Section -->
+     <footer class="footer py-5 bg-dark text-white">
+      <div class="container">
+          <div class="row">
+              <!-- Redes Sociales -->
+              <div class="col-md-3">
+                  <h5>Redes Sociales</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-white social-link"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                      <li><a href="#" class="text-white social-link"><i class="fab fa-twitter"></i> Twitter</a></li>
+                      <li><a href="#" class="text-white social-link"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                      <li><a href="#" class="text-white social-link"><i class="fab fa-github"></i> GitHub</a></li>
+                  </ul>
+              </div>
+              <!-- Formas de Contacto -->
+              <div class="col-md-3">
+                  <h5>Contacto</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="mailto:email@dominio.com" class="text-white">Email: email@dominio.com</a></li>
+                      <li><a href="tel:+1234567890" class="text-white">Teléfono: +123 456 7890</a></li>
+                      <li><a href="#" class="text-white">Formulario de Contacto</a></li>
+                  </ul>
+              </div>
+              <!-- Educación -->
+              <div class="col-md-3">
+                  <h5>Educación</h5>
+                  <ul class="list-unstyled">
+                      <li><strong>Ingeniería de Software</strong></li>
+                      <li>Universidad XYZ - 2023 - Actualidad</li>
+                      <li>Curso de Desarrollo Web - 2022</li>
+                      <li>Diplomado en Node.js - 2021</li>
+                  </ul>
+              </div>
+              <!-- Enlaces Rápidos -->
+              <div class="col-md-3">
+                  <h5>Enlaces Rápidos</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-white">Inicio</a></li>
+                      <li><a href="#about" class="text-white">Acerca de</a></li>
+                      <li><a href="#skills" class="text-white">Habilidades</a></li>
+                      <li><a href="#experience" class="text-white">Experiencia</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <!-- Derechos de Autor -->
+              <div class="col-12 text-center">
+                  <p>&copy; 2024 Todos los derechos reservados.</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="src/js/script.js"></script>
+    <script src="particles.min.js"></script>
+    <script src="src/js/particles.js"></script>
+  </body>
+</html>
